@@ -33,7 +33,8 @@ ESX.RegisterServerCallback('esx_boat:buyBoat', function(source, cb, vehicleProps
 			['@owner']   = xPlayer.identifier,
 			['@plate']   = vehicleProps.plate,
 			['@vehicle'] = json.encode(vehicleProps),
-			['@type']    = 'boat'
+			['@type']    = 'boat',
+			['@stored']  = 1
 		}, function(rowsChanged)
 			cb(true)
 		end)
